@@ -14,7 +14,7 @@
                 <h1>i'm kenji yamamoto</h1>
                 <h2>software developer & data analyst.</h2>
             </section>
-            <hr>
+
             <h3>hello</h3>
         </main>
         <section class="social" title="Linkedin">
@@ -50,7 +50,7 @@
             h1,h2,h3 {color:#FFF;margin: 0;}
             h1 {font-size: 30px;font-weight: 700;font-style: italic;}
             h2 {font-size: 20px;font-weight: 400;}
-            h3 {font-size: 45px;}
+            h3 {font-size: 50px;}
             a {text-decoration: none;}
             html {
                 width: 100%;
@@ -63,9 +63,34 @@
                 align-items: center;
                 display: flex;
                 flex-direction: column-reverse;
-                height: 150px;
+                height: 200px;
                 width: 300px;
             }
+            main section {
+                border-top: 2px solid #FFF;
+                padding: 20px 0 0 0;
+                overflow: hidden;
+                text-align: center;
+                height: 200px;
+                width: 300px;
+            }
+            main section h1 {
+                animation: headerMob0 1s ;
+                animation-timing-function: ease-out;
+            }
+            main section h2 {
+                animation: headerMob1 1s ;
+                animation-timing-function: ease-out;
+            }
+            @keyframes headerMob0 {
+              0% {margin-top: -100px;}
+              100% {margin-top: 0;}
+            }
+            @keyframes headerMob1 {
+              0% {margin-top: -10px;}
+              100% {margin-top: 0;}
+            }
+
             hr {
                 background-color: #FFF;
                 border: none;
@@ -99,7 +124,7 @@
                 text-align: center;
                 width: 200px;
             }
-            @media screen and (min-width: 667px) {
+            @media screen and (min-width: 767px) {
                 h1 {font-size: 35px;}
                 h2 {font-size: 25px;}
                 main {
@@ -114,6 +139,34 @@
                     right: 17px;
                     width: auto;
                 }
+
+                main section {
+                    border-top: none;
+                    border-left: 2px solid #FFF;
+                    margin-left: 50px;
+                    padding: 20px 0 25px 50px;
+
+                    margin-top: 0;
+                    height: auto;
+
+                    overflow: hidden;
+                    text-align: left;
+                    width: 400px;
+                }
+                main section h1,
+                main section h2 {
+                    animation: header0 1.5s ;
+                    animation-timing-function: ease-out;
+                }
+                @keyframes header0 {
+                  0% {
+                    margin-left: -500px;
+                  }
+                  100% {
+                    margin-left: 0;
+                  }
+                }
+
                 footer {
                     line-height: 2.5em;
                     padding: 0;
